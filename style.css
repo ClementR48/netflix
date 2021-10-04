@@ -1,0 +1,198 @@
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* Page d'acceuil */
+
+.first-block {
+  background:
+  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+  
+  url("https://assets.nflxext.com/ffe/siteui/vlv3/45e6f443-8eff-4c7b-ba24-fbdc84c37718/5b3dc438-336f-4188-a501-abac8738892b/FR-fr-20210927-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-position: center ;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+
+header {
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svg-logo {
+ width: clamp(100px, 20vw, 170px);
+  fill: rgb(229,9,20);
+}
+
+.header-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.select-langue {
+  position: relative;
+  margin-right: 30px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+#langue {
+  padding:9px 25px;
+  background-color: transparent;
+  color: white;
+  position: relative;
+  font-weight: 500;
+  appearance: none;
+  font-size: 17px;
+  
+}
+
+.fa-globe{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+}
+
+.fa-sort-down{
+  color: white;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+ option {
+  background-color: grey;
+}
+
+.header-btns button {
+  background-color: rgb(229,9,20);
+  border: none;
+  padding: 7px 17px;
+  border-radius: 3px;
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* Texte et Formulaire centre de page */
+
+.info-form {
+  margin: 150px auto;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  width: 800px;
+  
+}
+
+p:nth-child(1){
+  font-size: 4rem;
+  font-weight: 700;
+}
+p:nth-child(2){
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 20px;
+}
+p:nth-child(3){
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.info-form form {
+  position: relative;
+  display: flex;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+form input {
+  flex: 0.65;
+  padding: 27px 10px ;
+  border-radius: 3px;
+  border: none;
+  
+  
+}
+
+form input:focus {
+  outline: none;
+  
+}
+
+form .adress-effect {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: black;
+  transition: all 0.5s;
+}
+
+.active-email {
+  position: absolute;
+  top: 20%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: black;
+  transition: all 0.5s;
+}
+
+
+
+form button {
+  flex: 0.35;
+  border: none;
+  background-color: rgb(226,8,19);
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form button:hover {
+  background-color: rgb(250, 11, 23);
+}
+
+form button i {
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
