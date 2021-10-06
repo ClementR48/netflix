@@ -13,7 +13,6 @@ html body {
 .first-block {
   background:
   linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-  
   url("https://assets.nflxext.com/ffe/siteui/vlv3/45e6f443-8eff-4c7b-ba24-fbdc84c37718/5b3dc438-336f-4188-a501-abac8738892b/FR-fr-20210927-popsignuptwoweeks-perspective_alpha_website_small.jpg");
   background-position: center ;
   background-size: cover;
@@ -25,6 +24,7 @@ html body {
 
 
 header {
+  height: 100px;
   padding: 25px 50px;
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ header {
 }
 
 .svg-logo {
- width: clamp(100px, 20vw, 170px);
+ width: clamp(100px, 20vw, 250px);
   fill: rgb(229,9,20);
 }
 
@@ -40,6 +40,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
 }
 
 
@@ -53,14 +54,15 @@ header {
 
 
 #langue {
-  padding:9px 25px;
+  padding:9px 30px;
   background-color: transparent;
   color: white;
   position: relative;
   font-weight: 500;
   appearance: none;
-  font-size: 17px;
-  
+  font-size: 1.8em;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
 }
 
 .fa-globe{
@@ -69,6 +71,11 @@ header {
   top: 50%;
   left: 6px;
   transform: translateY(-50%);
+  width: 28px;
+}
+
+.fas {
+font-size: 20px;
 }
 
 .fa-sort-down{
@@ -89,77 +96,89 @@ header {
   padding: 7px 17px;
   border-radius: 3px;
   color: white;
-  font-weight: 500;
-  font-size: 17px;
+  font-size: 1.8em;
   cursor: pointer;
 }
 
 /* Texte et Formulaire centre de page */
 
+.container-info-form {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .info-form {
-  margin: 150px auto;
+  max-width: 1200px;
+  
+  width: 70%;
+  margin: 200px auto;
   text-align: center;
   color: white;
   font-size: 16px;
-  width: 800px;
-  
 }
 
+
 p:nth-child(1){
-  font-size: 4rem;
+  font-size: 6em;
   font-weight: 700;
 }
 p:nth-child(2){
-  font-size: 1.6rem;
+  font-size: 2.5em;
   font-weight: 500;
-  margin: 20px;
+  margin: 35px;
 }
 p:nth-child(3){
-  font-size: 1.2rem;
+  font-size: 1.8em;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .info-form form {
-  position: relative;
+  
+  padding: 0 30px;
   display: flex;
-  padding: 0 10px;
-  margin: 0 auto;
+  align-items: center;
+
 }
 
-form input {
+.input-label{
   flex: 0.65;
-  padding: 27px 10px ;
+  position: relative;
+  background-color: black;
+}
+
+.input-label input {
+  width: 100%;
+  padding: 40px 10px ;
   border-radius: 3px;
   border: none;
-  
-  
+  font-size: 1.5em;
 }
 
-form input:focus {
+.input-label input:focus {
   outline: none;
   
 }
 
-form .adress-effect {
+.input-label label {
   position: absolute;
+  color: grey;
+  font-size: 1.5em;
   top: 50%;
-  left: 20px;
+  left: 50px;
   transform: translateY(-50%);
-  z-index: 1;
-  color: black;
-  transition: all 0.5s;
+  transition: all 0.5s ease;
 }
 
-.active-email {
-  position: absolute;
+form.active-input .input-label label {
   top: 20%;
-  left: 20px;
-  transform: translateY(-50%);
-  z-index: 1;
-  color: black;
-  transition: all 0.5s;
+  left: 40px;
 }
+
+
 
 
 
@@ -168,11 +187,12 @@ form button {
   border: none;
   background-color: rgb(226,8,19);
   color: white;
-  font-size: 1.8rem;
+  font-size: 2.5em;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 34px 10px ;
 }
 
 form button:hover {
@@ -183,6 +203,96 @@ form button i {
   margin-left: 10px;
 }
 
+
+/* media */
+
+ @media screen and (max-width : 1440px){
+  .header-btns {
+    font-size: 10px;
+  }
+  .info-form {
+    width: 70%;
+  }
+  p:nth-child(1){
+    font-size: 4em;
+    
+  }
+
+
+} 
+ @media screen and (max-width : 1024px){
+  .info-form {
+    width: 70%;
+    font-size: 12px;
+  }
+  p:nth-child(1){
+    font-size: 4em;
+    
+  }
+} 
+
+@media screen and (max-width : 800px){
+
+  .info-form {
+    font-size: 10px;
+  }
+  
+
+  p:nth-child(2){
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 10px;
+  }
+  p:nth-child(3){
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .info-form form{
+    flex-direction: column;
+  }
+  .input-label{
+    
+    width: 100%;
+
+  }
+
+  .input-label input {
+    padding: 20px;
+  }
+  form button {
+    margin-top: 10px;
+   border-radius: 3px;
+    padding: 10px 17px;
+    font-size: 2em;
+  }
+
+} 
+
+@media screen and (max-width : 426px){
+  header {
+    padding: 5px;
+  }
+  .header-btns {
+    font-size: 8px;
+  }
+  .select-langue {
+    margin-right: 10px;
+  }
+
+  #langue {
+    padding: 9px 18px;
+  }
+  .info-form {
+    font-size: 8px;
+    width: 90%;
+  }
+
+  .fas {
+    font-size: 12px;
+    }
+}
 
 
 
